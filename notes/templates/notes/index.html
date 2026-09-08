@@ -1,0 +1,16 @@
+{% extends "notes/base.html" %}
+
+{% block content %}
+<form method="post">
+  {% csrf_token %}
+  <label for="titulo">Título</label>
+  <input id="titulo" type="text" name="titulo" />
+  <label for="detalhes">Detalhes</label>
+  <textarea id="detalhes" name="detalhes"></textarea>
+  <input type="submit" />
+</form>
+
+<ul>
+  <li>Nenhuma anotação por enquanto.</li>
+</ul>
+{% endblock %}

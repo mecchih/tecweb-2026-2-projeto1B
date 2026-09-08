@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Get-it</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Permanent+Marker&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="{% static 'notes/getit.css' %}" />
+</head>
+<body>
+
+<div class="appbar">
+  <img src="{% static 'notes/img/logo-getit.png' %}" class="logo" />
+  <span class="subtitle">Como o Post-it, mas com outro verbo</span>
+</div>
+
+<main class="container">
+  {% block content %}
+  {% endblock %}
+</main>
+
+<script type="text/javascript" src="{% static 'notes/getit.js' %}"></script>
+</body>
+</html>
