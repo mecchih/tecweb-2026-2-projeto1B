@@ -1,0 +1,18 @@
+{% extends "notes/base.html" %}
+
+{% block content %}
+<h2 class="page-title">#{{ tag.name }}</h2>
+
+<div class="card-container">
+  {% for note in notes %}
+  <div class="card">
+    <h3 class="card-title">{{ note.title }}</h3>
+    <div class="card-content">
+      <p>{{ note.content }}</p>
+    </div>
+  </div>
+  {% empty %}
+  <p>Nenhuma anotação com essa tag.</p>
+  {% endfor %}
+</div>
+{% endblock %}

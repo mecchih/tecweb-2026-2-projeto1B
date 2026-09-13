@@ -42,7 +42,7 @@ body {
 
 
 .container {
-  max-width: 1100px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 24px 32px 48px;
   display: flex;
@@ -132,24 +132,27 @@ body {
 }
 
 .card {
+  position: relative;
   width: calc((100% - 5 * 16px) / 6);
-  padding: 12px;
+  padding: 16px;
   border-radius: 2px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 .card-title {
   font-family: "Permanent Marker", cursive;
-  font-size: 15px;
+  font-size: 17px;
   color: #2c2c2c;
-  margin-bottom: 6px;
+  margin-top: 0;
+  margin-bottom: 8px;
 }
 
 .card-content p {
   font-family: "Permanent Marker", cursive;
-  font-size: 12px;
+  font-size: 14px;
   color: #4c4c4c;
 }
+
 .card-color-1 {
   background-color: #ead3a7;
 }
@@ -449,4 +452,103 @@ body {
   background-color: #fbe9e7;
   border-radius: 4px;
   padding: 8px 12px;
+}
+
+.card {
+  position: relative;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+  margin-bottom: -4px;
+  line-height: 0;
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  color: #4c4c4c;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.icon-btn svg {
+  stroke: #4c4c4c;
+}
+
+.icon-btn:hover svg {
+  stroke: #2c2c2c;
+}
+
+.tags-link {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  color: #4c4c4c;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.tags-link:hover {
+  color: #2c2c2c;
+}
+
+.form-card-tag {
+  border: none;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: #4c4c4c;
+  padding: 2px 0;
+}
+
+.form-card-tag::placeholder {
+  color: #4c4c4c;
+}
+
+.tag-badge {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  background-color: #f7d736;
+  color: #2c2c2c;
+  font-family: "Permanent Marker", cursive;
+  font-size: 11px;
+}
+
+.tags-table {
+  width: 100%;
+  max-width: 600px;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.tags-table th,
+.tags-table td {
+  padding: 12px 16px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.tags-table th {
+  background-color: #f7f7f7;
+  color: #4c4c4c;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.tags-table-link a {
+  text-decoration: none;
 }
