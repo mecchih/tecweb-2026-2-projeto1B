@@ -5,7 +5,7 @@
   {% csrf_token %}
   <input class="form-card-title" type="text" name="titulo" value="{{ note.title }}" />
   <textarea class="autoresize" name="detalhes">{{ note.content }}</textarea>
-  <input class="form-card-tag" type="text" name="tag" placeholder="Adicione uma tag" value="{{ note.tag.name }}" />
+  <input class="form-card-tag" type="text" name="tag" placeholder="Adicione tags separadas por vírgula" value="{% for tag in note.tags.all %}{{ tag.name }}{% if not forloop.last %}, {% endif %}{% endfor %}" />
   <button class="btn" type="submit">Salvar</button>
   <a class="btn-cancel" href="{% url 'index' %}">Cancelar</a>
 </form>

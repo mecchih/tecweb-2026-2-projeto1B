@@ -7,7 +7,7 @@
   {% csrf_token %}
   <input class="form-card-title" type="text" name="titulo" placeholder="Título" />
   <textarea class="autoresize" name="detalhes" placeholder="Digite o conteúdo..."></textarea>
-  <input class="form-card-tag" type="text" name="tag" placeholder="Adicione uma tag" />
+  <input class="form-card-tag" type="text" name="tag" placeholder="Adicione tags separadas por vírgula" />
   <button class="btn" type="submit">Criar</button>
 </form>
 
@@ -35,9 +35,11 @@
     <div class="card-content">
       <p>{{ note.content }}</p>
     </div>
-    {% if note.tag %}
-    <span class="tag-badge">#{{ note.tag.name }}</span>
-    {% endif %}
+    <div class="tag-list">
+      {% for tag in note.tags.all %}
+      <span class="tag-badge">#{{ tag.name }}</span>
+      {% endfor %}
+    </div>
   </div>
   {% empty %}
   <p>Nenhuma anotação por enquanto.</p>
